@@ -1217,7 +1217,9 @@ static void SetSafetyNetProps() {
         {"ro.boot.flash.locked", "1"},
         {"ro.boot.vbmeta.device_state", "locked"},
         {"ro.boot.vbmeta.hash_alg", "sha256"},
+#ifdef SPOOF_AVB_VERSION
         {"ro.boot.vbmeta.avb_version", "1.0"},
+#endif
         {"ro.boot.vbmeta.invalidate_on_error", "yes"},
         {"ro.boot.verifiedbootstate", "green"},
         {"ro.boot.veritymode", "enforcing"},
